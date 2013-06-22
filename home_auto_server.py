@@ -70,7 +70,7 @@ light1_off()
 # -------------------- #
 
 # Instantiate the server on the port 8000, it starts immediately in its own thread
-server = webiopi.Server(port=3333, login="jamie", password="password")
+server = webiopi.Server(port=3333, login="user", password="password")
 
 # Register the macros so you can call it with Javascript and/or REST API
 
