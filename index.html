@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content = "height = device-height, width = 420, user-scalable = no" /> 
+	<title>Home Automation</title>
+	<script type="text/javascript" src="/webiopi.js"></script>
+	<script type="text/javascript">
+	
+	function curtain_open() {
+		webiopi().callMacro("curtain_open");
+	}
+		
+	function curtain_close() {
+		webiopi().callMacro("curtain_close");
+	}
+	
+	function curtain_stop() {
+		webiopi().callMacro("curtain_stop");
+	}
+	
+	function l1_on() {
+		webiopi().callMacro("l1_on");
+	}
+	
+	function l1_off() {
+		webiopi().callMacro("l1_off");
+	}
+	
+	webiopi().ready(init);
+		
+	</script>
+	<style type="text/css">
+		
+		.heading {
+			font-family: Calibri;
+			font-size: 30pt;
+		}
+		
+		.button {
+			margin: 8px 8px 8px 8px;
+			border: solid;
+			border-width: thick;
+			width: 250px;
+			height: 40px;
+			color: black;
+			font-size: 25pt; 
+			font-family: Calibri;
+			font-weight: bold;
+			background-color: grey;
+		}
+		
+		.button_small {
+			margin: 8px 8px 8px 8px;
+			border: solid;
+			border-width: thick;
+			width: 115px;
+			height: 40px;
+			color: black;
+			font-size: 25pt; 
+			font-family: Calibri;
+			font-weight: bold;
+			background-color: grey;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="content" align="center">
+		<h1 class="heading">SmartHome Control</h1> <br />
+		
+		<div class="button" onClick="curtain_open()">Open</div>
+		<div class="button" onClick="curtain_close()">Close</div>
+		<div class="button" onClick="curtain_stop()">Stop</div>
+		
+		<div class="button_small" onClick="l1_on()" style="left:-68px; position:relative;">L1 On</div>
+		<div class="button_small" onClick="l1_off()" style="left:67px; top:-58px; position:relative;">L1 Off</div>
+	
+		<!-- <div class="button" onClick="test()">Test</div> -->
+		
+	</div>
+</body>
+</html>
